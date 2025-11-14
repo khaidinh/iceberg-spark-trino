@@ -24,6 +24,10 @@ echo "JAR sentinel found. Proceeding to start Spark (mode=$SPARK_MODE)"
 # Ensure jars are present
 ls -lh "$JARS_DIR" || true
 
+# Add jars to classpath for Spark processes
+export SPARK_CLASSPATH="$JARS_DIR/*:${SPARK_CLASSPATH:-}"
+echo "Set SPARK_CLASSPATH=$SPARK_CLASSPATH"
+
 # Start appropriate Spark process. Use sbin scripts from Spark distribution.
 if [ "${SPARK_MODE:-}" = "master" ] || [ "${SPARK_MODE:-}" = "MASTER" ]; then
   echo "Starting Spark master"

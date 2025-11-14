@@ -155,7 +155,7 @@ services:
     command: >
       bash -c "
         # Install Python dependencies
-        pip install --upgrade pyiceberg[pyarrow] setuptools wheel &&
+        pip install --quiet pyiceberg[pyarrow] boto3 setuptools wheel &&
 
         # Start Jupyter normally
         start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
