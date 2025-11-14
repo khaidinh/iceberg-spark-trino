@@ -1,6 +1,7 @@
 # Apache Iceberg Environment with Spark, Trino, and MinIO
 
-NOTE: Created mostly with prompts, using GitHub Copilot integration with VS Code (see GitHub-Copilot-Prompts.md).
+[!NOTE]
+Created mostly with prompts, using GitHub Copilot integration with VS Code. See [GitHub-Copilot-Prompts.md](GitHub-Copilot-Prompts.md).
 
 This Docker Compose setup creates a complete Apache Iceberg data lakehouse environment with:
 
