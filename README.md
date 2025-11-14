@@ -41,9 +41,9 @@ This Docker Compose setup creates a complete Apache Iceberg data lakehouse envir
 |---------|---------|-----|-----|
 | MinIO API | 9000 | http://localhost:9000 | `minioadmin:minioadmin` |
 | MinIO Console | 9001 | http://localhost:9001 | `minioadmin:minioadmin` |
-| Trino | 8080 | http://localhost:8080 | - |
+| Trino | 9090 | http://localhost:9090 | Anything |
 | Spark Master | 7077 (RPC) | spark://spark-master:7077 | - |
-| Spark Web UI | 8888 | http://localhost:8888 | - |
+| Spark Web UI | 8080 | http://localhost:8080 | - |
 | Spark Worker 1 | 8081 | http://localhost:8081 | - |
 | Spark Worker 2 | 8082 | http://localhost:8082 | - |
 | Jupyter Notebook | 8888 | http://localhost:8888 | No auth |
@@ -78,12 +78,12 @@ Password: minioadmin
 
 **Trino Web UI:**
 ```
-URL: http://localhost:8080
+URL: http://localhost:9090
 ```
 
 **Spark Master Web UI:**
 ```
-URL: http://localhost:8888
+URL: http://localhost:8080
 ```
 
 **Jupyter Notebook:**
@@ -164,8 +164,8 @@ You can inspect or override the script at `./scripts/download_iceberg_jars.sh`.
 
 ### Spark Configuration
 - `SPARK_MASTER_URL`: `spark://spark-master:7077`
-- `SPARK_WORKER_MEMORY`: `2G` (each worker)
-- `SPARK_WORKER_CORES`: `2` (each worker)
+- `SPARK_WORKER_MEMORY`: `1G` (each worker)
+- `SPARK_WORKER_CORES`: `1` (each worker)
 
 ### MinIO Configuration
 - `MINIO_ROOT_USER`: `minioadmin`
