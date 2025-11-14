@@ -28,7 +28,7 @@ Add health check to Jupyter container
 
 trino status "Exited (100) About a minute ago"
 
-Fix Trino health check endpoint to hit "http://localhost:9090/v1/info"
+Fix Trino health check endpoint to hit "http://localhost:8080/v1/info"
 
 ## Fix Spark master and workers
 
