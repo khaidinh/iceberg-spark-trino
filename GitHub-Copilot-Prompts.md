@@ -34,3 +34,5 @@ Fix Trino health check endpoint to hit "http://localhost:9090/v1/info"
 
 spark master and workers crashed
 
+Set each worker memory to 1G and core to 1
+
